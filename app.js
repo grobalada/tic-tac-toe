@@ -328,6 +328,4 @@ resetBtn.addEventListener('click',() => {
     isGameOver = false
     currentPlayer = 'X'
     messageEl.textContent = `It's ${currentPlayer}'s turn`
-
-
 })
