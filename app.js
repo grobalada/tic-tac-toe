@@ -9,7 +9,7 @@ let isGameOver = false
 
 /*----- Cached Element References ------------------------*/
 const messageEl = document.querySelector('#message')
-
+const resetBtn = document.getElementById('reset')
 const sqr0El = document.getElementById('0')
 const sqr1El = document.getElementById('1')
 const sqr2El = document.getElementById('2')
@@ -33,6 +33,7 @@ sqr0El.addEventListener('click', () => {
         return
     } else {
         sqr0El.textContent = currentPlayer
+
         if (
             (sqr0El.textContent === currentPlayer && sqr1El.textContent === currentPlayer && sqr2El.textContent === currentPlayer) ||
             (sqr3El.textContent === currentPlayer && sqr4El.textContent === currentPlayer && sqr5El.textContent === currentPlayer) ||
@@ -43,7 +44,12 @@ sqr0El.addEventListener('click', () => {
             (sqr0El.textContent === currentPlayer && sqr4El.textContent === currentPlayer && sqr8El.textContent === currentPlayer) ||
             (sqr2El.textContent === currentPlayer && sqr4El.textContent === currentPlayer && sqr6El.textContent === currentPlayer)
             ) {
-            message.textContent = `${currentPlayer} wins!`
+            messageEl.textContent = `${currentPlayer} wins!`
+            isGameOver = true
+            return
+        }
+        if (sqr0El.textContent !== '' && sqr1El.textContent !== '' && sqr2El.textContent!== '' && sqr3El.textContent !== '' && sqr4El.textContent !== '' && sqr5El.textContent !== '' && sqr6El.textContent !== '' && sqr7El.textContent !== '' && sqr8El.textContent !== '') {
+            messageEl.textContent = 'Tie!'
             isGameOver = true
             return
         }
@@ -71,7 +77,7 @@ sqr1El.addEventListener('click', () => {
             (sqr0El.textContent === currentPlayer && sqr4El.textContent === currentPlayer && sqr8El.textContent === currentPlayer) ||
             (sqr2El.textContent === currentPlayer && sqr4El.textContent === currentPlayer && sqr6El.textContent === currentPlayer)
             ) {
-            message.textContent = `${currentPlayer} wins!`
+            messageEl.textContent = `${currentPlayer} wins!`
             isGameOver = true
             return
         }
@@ -99,7 +105,7 @@ sqr2El.addEventListener('click', () => {
             (sqr0El.textContent === currentPlayer && sqr4El.textContent === currentPlayer && sqr8El.textContent === currentPlayer) ||
             (sqr2El.textContent === currentPlayer && sqr4El.textContent === currentPlayer && sqr6El.textContent === currentPlayer)
             ) {
-            message.textContent = `${currentPlayer} wins!`
+            messageEl.textContent = `${currentPlayer} wins!`
             isGameOver = true
             return
         }
@@ -127,7 +133,12 @@ sqr3El.addEventListener('click', () => {
             (sqr0El.textContent === currentPlayer && sqr4El.textContent === currentPlayer && sqr8El.textContent === currentPlayer) ||
             (sqr2El.textContent === currentPlayer && sqr4El.textContent === currentPlayer && sqr6El.textContent === currentPlayer)
             ) {
-            message.textContent = `${currentPlayer} wins!`
+            messageEl.textContent = `${currentPlayer} wins!`
+            isGameOver = true
+            return
+        }
+        if (sqr0El.textContent !== '' && sqr1El.textContent !== '' && sqr2El.textContent!== '' && sqr3El.textContent !== '' && sqr4El.textContent !== '' && sqr5El.textContent !== '' && sqr6El.textContent !== '' && sqr7El.textContent !== '' && sqr8El.textContent !== '') {
+            messageEl.textContent = 'Tie!'
             isGameOver = true
             return
         }
@@ -155,7 +166,12 @@ sqr4El.addEventListener('click', () => {
             (sqr0El.textContent === currentPlayer && sqr4El.textContent === currentPlayer && sqr8El.textContent === currentPlayer) ||
             (sqr2El.textContent === currentPlayer && sqr4El.textContent === currentPlayer && sqr6El.textContent === currentPlayer)
             ) {
-            message.textContent = `${currentPlayer} wins!`
+            messageEl.textContent = `${currentPlayer} wins!`
+            isGameOver = true
+            return
+        }
+        if (sqr0El.textContent !== '' && sqr1El.textContent !== '' && sqr2El.textContent!== '' && sqr3El.textContent !== '' && sqr4El.textContent !== '' && sqr5El.textContent !== '' && sqr6El.textContent !== '' && sqr7El.textContent !== '' && sqr8El.textContent !== '') {
+            messageEl.textContent = 'Tie!'
             isGameOver = true
             return
         }
@@ -183,7 +199,12 @@ sqr5El.addEventListener('click', () => {
             (sqr0El.textContent === currentPlayer && sqr4El.textContent === currentPlayer && sqr8El.textContent === currentPlayer) ||
             (sqr2El.textContent === currentPlayer && sqr4El.textContent === currentPlayer && sqr6El.textContent === currentPlayer)
             ) {
-            message.textContent = `${currentPlayer} wins!`
+            messageEl.textContent = `${currentPlayer} wins!`
+            isGameOver = true
+            return
+        }
+        if (sqr0El.textContent !== '' && sqr1El.textContent !== '' && sqr2El.textContent!== '' && sqr3El.textContent !== '' && sqr4El.textContent !== '' && sqr5El.textContent !== '' && sqr6El.textContent !== '' && sqr7El.textContent !== '' && sqr8El.textContent !== '') {
+            messageEl.textContent = 'Tie!'
             isGameOver = true
             return
         }
@@ -211,7 +232,12 @@ sqr6El.addEventListener('click', () => {
             (sqr0El.textContent === currentPlayer && sqr4El.textContent === currentPlayer && sqr8El.textContent === currentPlayer) ||
             (sqr2El.textContent === currentPlayer && sqr4El.textContent === currentPlayer && sqr6El.textContent === currentPlayer)
             ) {
-            message.textContent = `${currentPlayer} wins!`
+            messageEl.textContent = `${currentPlayer} wins!`
+            isGameOver = true
+            return
+        }
+        if (sqr0El.textContent !== '' && sqr1El.textContent !== '' && sqr2El.textContent!== '' && sqr3El.textContent !== '' && sqr4El.textContent !== '' && sqr5El.textContent !== '' && sqr6El.textContent !== '' && sqr7El.textContent !== '' && sqr8El.textContent !== '') {
+            messageEl.textContent = 'Tie!'
             isGameOver = true
             return
         }
@@ -239,7 +265,12 @@ sqr7El.addEventListener('click', () => {
             (sqr0El.textContent === currentPlayer && sqr4El.textContent === currentPlayer && sqr8El.textContent === currentPlayer) ||
             (sqr2El.textContent === currentPlayer && sqr4El.textContent === currentPlayer && sqr6El.textContent === currentPlayer)
             ) {
-            message.textContent = `${currentPlayer} wins!`
+            messageEl.textContent = `${currentPlayer} wins!`
+            isGameOver = true
+            return
+        }
+        if (sqr0El.textContent !== '' && sqr1El.textContent !== '' && sqr2El.textContent!== '' && sqr3El.textContent !== '' && sqr4El.textContent !== '' && sqr5El.textContent !== '' && sqr6El.textContent !== '' && sqr7El.textContent !== '' && sqr8El.textContent !== '') {
+            messageEl.textContent = 'Tie!'
             isGameOver = true
             return
         }
@@ -267,7 +298,12 @@ sqr8El.addEventListener('click', () => {
             (sqr0El.textContent === currentPlayer && sqr4El.textContent === currentPlayer && sqr8El.textContent === currentPlayer) ||
             (sqr2El.textContent === currentPlayer && sqr4El.textContent === currentPlayer && sqr6El.textContent === currentPlayer)
             ) {
-            message.textContent = `${currentPlayer} wins!`
+            messageEl.textContent = `${currentPlayer} wins!`
+            isGameOver = true
+            return
+        }
+        if (sqr0El.textContent !== '' && sqr1El.textContent !== '' && sqr2El.textContent!== '' && sqr3El.textContent !== '' && sqr4El.textContent !== '' && sqr5El.textContent !== '' && sqr6El.textContent !== '' && sqr7El.textContent !== '' && sqr8El.textContent !== '') {
+            messageEl.textContent = 'Tie!'
             isGameOver = true
             return
         }
@@ -278,4 +314,20 @@ sqr8El.addEventListener('click', () => {
         }
         messageEl.textContent = `It's ${currentPlayer}'s turn`
     }
+})
+resetBtn.addEventListener('click',() => {
+    sqr0El.textContent = ''
+    sqr1El.textContent = ''
+    sqr2El.textContent = ''
+    sqr3El.textContent = ''
+    sqr4El.textContent = ''
+    sqr5El.textContent = ''
+    sqr6El.textContent = ''
+    sqr7El.textContent = ''
+    sqr8El.textContent = ''
+    isGameOver = false
+    currentPlayer = 'X'
+    messageEl.textContent = `It's ${currentPlayer}'s turn`
+
+
 })
